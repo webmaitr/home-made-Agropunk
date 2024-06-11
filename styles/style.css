@@ -4,6 +4,7 @@
     --dark-green: #078c03;
     --medium-green: #57c753;
     --pale-green: #d2f2c9;
+    --background-green: #d2f2c981;
     --light-green: #c4ef56;
     --agropunk-yellow: #f5e836;
     --solar-yellow: #f2cb05;
@@ -109,23 +110,31 @@ a {
 }
 
 main {
-    margin-left: 30px;
-    background: linear-gradient(45deg, var(--medium-green), var(--pale-green));
+    background-color: var(--background-green);
 }
 .maintree {
-    margin-left: 30px;
+    padding-left: 40px;
     margin-top: 12px;
+    background-color: white;
 }
 
 .maintree ul {
     list-style-type: none;
     padding-top: 20px;
+    padding-left: 20px;
     position: relative;
+    background: linear-gradient(45deg, var(--medium-green), var(--pale-green));
 }
 
 .maintree li {
     border-left: 6px solid var(--agropunk-black);
     width: 100%;
+    padding-bottom: 40px;
+}
+
+.maintree li .fa-solid {
+    font-size: 3rem;
+    margin-left: -1.2rem;
 }
 
 .maintree ul li:first-of-type {
@@ -155,7 +164,6 @@ main {
     border-radius: 0 0 100px 0;
     width: 70%;
     padding-bottom: 10px;
-    margin-bottom: 40px;
     filter: drop-shadow(4px 4px 4px var(--dark-green))
 }
 
@@ -183,4 +191,42 @@ main {
     padding: 10px 20px 10px 5px;;
     width: max-content;
     height: max-content;
+}
+
+.middle-banner {
+    height: 5.4rem;
+    background: linear-gradient(var(--dark-green), var(--solar-yellow), #022601);
+    margin-bottom: 40px;
+}
+
+.middle-banner img {
+    width: 45%;
+    margin-top: -10px;
+    margin-left: 5px;
+    position: relative;
+    z-index: 4;
+}
+
+article {
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+}
+
+.article-header {
+    background-color: var(--background-green) ;
+}
+
+article h2 {
+    font-family: Merriweather;
+    font-size: 1.8rem;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.4rem;
+    padding: 5px 15px;
+    color: var(--agropunk-black);
+    text-indent: 1rem;
 }
