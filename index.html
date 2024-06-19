@@ -9,39 +9,36 @@
         <link rel="icon" type="image/svg+xml" href="../assets/icons/logo_Agropunk_solar.svg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="assets/styles/homepage.css">
     </head>
     <body>
         <header>
-            <hgroup class="top-header">
-                <h1 class="top-title">accueil Agropunk</h1>
+            <hgroup>
+                <h1>accueil Agropunk</h1>
                 <i class="fa-solid fa-bars"></i>
             </hgroup>
-            <hgroup class="banner">
-                <h2>Réinventer la lutte contre la faim</h2>
-                <p> <img src="assets/icons/logo_Agropunk_solar.svg" alt="logo Agropunk"> </p>
-            </hgroup>
-            <figure class="catchword">
-                <img src="assets/icons/Agropunk.png" alt="nom Agropunk">
-                <figcaption>PERMACULTURE</figcaption>
+            <figure class="banner">
+                <img src="assets/icons/logo_Agropunk_solar.svg" alt="logo Agropunk">
+                <figcaption>Réinventer la lutte<br>contre la faim</figcaption>
             </figure>
-            <div class="tagline">
-                <p>&amp;</p> 
-                <p><strong>contre-culture<br>permanente</strong></p>
-            </div>
-        </header>
-       
+            <section class="tagline">
+                <h2>Agropunk</h2>
+                <p>PERMACULTURE</p>
+                <p>&amp;</p>
+                <p><strong>contre&#8209culture permanente</strong></p>
+            </section>    
+        </header>          
         <main>
-            <nav class="central-nav-tree">
+            <nav aria-label="trois grandes sections du site" class="central-nav-tree">
                 <ul>
                     <li>
                         <a href="#association">
-                            <hgroup class="branch-tree">
-                                <h3 class="maintree-btn">L'ASSO</h3>
+                            <hgroup>
+                                <h3>L'ASSO</h3>
                                 <p>Vie associative et<br>rouages de l'ESS</p>
                             </hgroup>
                         </a>
@@ -49,8 +46,8 @@
                     </li>
                     <li>
                         <a href="#network">
-                            <hgroup class="branch-tree">
-                                <h3 class="maintree-btn">LE RÉSEAU</h3>
+                            <hgroup>
+                                <h3>LE RÉSEAU</h3>
                                 <p>Intelligence collective<br>sans-frontière</p>
                             </hgroup>
                         </a>
@@ -58,8 +55,8 @@
                     </li>
                     <li>
                         <a href="#school">
-                            <hgroup class="branch-tree">
-                                <h3 class="maintree-btn">L'ÉCOLE</h3>
+                            <hgroup>
+                                <h3>L'ÉCOLE</h3>
                                 <p>Écosystème<br>pédago-punk</p>
                             </hgroup>
                         </a>
@@ -71,7 +68,7 @@
                 <img src="assets/icons/zero hunger.png" alt="zero hunger punk way">
             </div>
             <article id="association">
-                <header class="article-header">
+                <header>
                     <h2>L'association Agropunk</h2>
                 </header>
                 <p>
@@ -81,9 +78,10 @@
                     À la sienne tout d'abord, animée par des bénévoles, encadrée par la loi bien connue de 1901, motivée par une mission d'intérêt général, tourmentée par la folle recherche de ressources pour faire vivre ou pour survivre, et rythmée avec plus ou moins d'entrain par des réunions elles-mêmes plus ou moins régulières.
                 </p>
                 <p>
-                    Mais aussi à la vie associative en général, et plus exactement à l'acteur économique et social insolite et pourtant incontournable que constitue <em>l'asso</em>.<br>Car il ne faut pas l'oublier, cette volonté d'individus de mettre en commun leurs compétences et leur force de travail, gratuitement, et pour autre chose que d'accumuler des richesses et des profits, est un acte extraordinaire, voire un paradoxe.
+                    Mais aussi à la vie associative en général, et plus exactement à l'acteur économique et social insolite et pourtant incontournable que constitue <em>l'asso</em>.<br>Car il ne faut pas l'oublier, <strong>cette volonté d'individus de mettre en commun leurs compétences et leur force de travail, gratuitement, et pour autre chose que d'accumuler des richesses et des profits, est un acte extraordinaire</strong>, voire un paradoxe.
                 </p>
-                <nav class="second-tree">
+                <nav aria-labelledby="assonav" class="second-nav">
+                    <p id="assonav">Dans cette section :</p>
                     <ul>
                         <li>
                         <a href="#">
@@ -109,11 +107,23 @@
                 </nav>
             </article>
             <article id="network">
-                <h2>L'écosystème Agropunk</h2>
+                <header>
+                    <h2>L'écosystème Agropunk</h2>
+                </header>
                 <p>
-                    
+                    Si on considère que la première partie du site Agropunk concerne les aspects internes de la structure associative, la seconde est résolument tournée vers l'extérieur.
                 </p>
-                <nav class="second-tree">
+                <p>
+                    Ce sont des actions de communication <i lang="eng">punk-made</i> tout d'abord, à destination des différents publics, adhérent&centerdot;e&centerdot;s, sympathisant&centerdot;e&centerdot;s, ou non. Nous voulons évidemment expliquer ce que nous faisons et exposer nos idées, mais <strong>nous voulons surtout savoir ce que <em>vous</em> en pensez</strong>.
+                </p>
+                <p>
+                    C'est aussi une stratégie hors-norme des échanges et de la collaboration entre organisations, qui postule en substance que <strong>la compétition n'est ni une fatalité, ni une bonne chose</strong>.
+                </p>
+                <p>
+                    L'ensemble forme un système complexe et dynamique de liens et d'échanges, à l'image de ce qu'il se passe dans un écosystème naturel.
+                </p>
+                <nav aria-labelledby="netnav" class="second-nav">
+                    <p id="netnav"> Dans cette section :</p>
                     <ul>
                         <li>
                         <a href="#">
@@ -139,8 +149,23 @@
                 </nav>
             </article>
             <article id="school">
-                <h2>L'A Skool</h2>
-                <nav class="second-tree">
+                <header>
+                    <h2>L'A Skool</h2>
+                </header>
+                <p>
+                    La dernière partie du site Agropunk - et sans conteste la plus ambitieuse - mais peut-être aussi la plus urgente - se réclame de <strong>l'éducation populaire</strong> (celle qui veut sincèrement améliorer la vie des gens au milieu des autres gens).
+                </p>
+                <p>
+                    Elle part du concept que <strong>tout le monde peut apprendre</strong> dès lors que c'est le dispositif d'enseignement qui s'adapte à chacun des apprenant&centerdot;e&centerdot;s, et non l'inverse.
+                </p>
+                <p>
+                    Elle s'amuse avec l'idée que si tout le monde avait le même niveau d'éducation, celles et ceux qui effectueraient les tâches les plus ingrates seraient les mieux payé&centerdot;e&centerdot;s.
+                </p>
+                <p>
+                    Elle se fixe comme objectif que - pour préparer l'avenir de notre espèce sur notre planète - chacun&centerdot;e devrait être capable de <strong>parler aux arbres et de réparer son robot</strong>.
+                </p>
+                <nav aria-labelledby="ecosnav" class="second-nav">
+                    <p id="ecosnav">Dans cette section :</p>
                     <ul>
                         <li>
                         <a href="#">
