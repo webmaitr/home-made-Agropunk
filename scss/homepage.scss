@@ -1,0 +1,239 @@
+//! by Laurent Van Reeth aka Webmaitr
+@use "global" as gl;
+
+@keyframes branch-shake {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(0.5deg)}
+  100% {transform: rotate(0deg);}
+}
+
+h1 {
+  font-family: gl.$font-prose;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header {
+  hgroup {
+    display: flex;
+    height: 45px;
+    padding: 0 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.4rem;
+    background: linear-gradient(gl.$dark-green, gl.$solar-yellow, #022601);
+    margin-bottom: 50px;
+    figcaption {
+      max-width: 60%;
+      font-size: 1.7rem;
+      letter-spacing: 0.1rem;
+      color: white;
+      padding-right: 10vw;
+    }
+    & img {
+        width: 30vw;
+        max-width: 150px;
+    }
+  }
+  .tagline {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    h2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-family: Permanent Marker;
+      font-size: 18.7vw;
+      letter-spacing: 0.3rem;
+      color: gl.$dark-green;
+      transform: scaleY(2);
+      filter: drop-shadow(1px -1px gl.$agropunk-black);
+    }
+    p:first-of-type {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-size: 12.6vw;
+      font-weight: 700;
+      color: gl.$light-green;
+      transform: scaleY(1.5);
+      position: relative;
+      z-index: 1;
+    }
+    p:nth-of-type(2) {
+      font-family: gl.$font-title;
+      font-size: 30vw;
+      transform: scaleX(0.8);
+      color: gl.$agropunk-black;
+      line-height: 6.5rem;
+      position: relative;
+      left: -10px;
+      z-index: 2;
+    }
+    p:last-of-type {
+      display: inline-block;
+      font-size: 12vw;
+      font-weight: 400;
+      line-height: 8vw;
+      color: white;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-left: -10px;
+    }
+  }
+}
+
+main {
+  background-color: gl.$background-green;
+}
+
+.central-nav-tree {
+  padding-left: 40px;
+  margin-top: 20px;
+  background-color: white;
+  ul {
+    list-style-type: none;
+    position: relative;
+    background: linear-gradient(45deg, gl.$medium-green, gl.$pale-green);
+    li {
+      border-left: 6px solid gl.$agropunk-black;
+      width: 100%;
+      max-width: 350px;
+    
+      &:first-of-type {
+        height: 100%;
+        min-height: 50vh;
+        position: relative;
+        top: 1%;
+        z-index: 1;
+      }
+      &:nth-of-type(2) {
+        margin-left: 30px;
+        position: absolute;
+        top: 30%;
+        z-index: 2;
+        height: 35vh;
+      }
+      &:last-of-type {
+        margin-left: 60px;
+        position: absolute;
+        top: 60%;
+        z-index: 3;
+        height: 20vh;
+      }
+      hgroup {
+        background: radial-gradient(closest-corner at 75% 40%, gl.$light-green 5%, gl.$medium-green 200%, gl.$dark-green);
+        border-radius: 0 0 100px 0;
+        width: 70%;
+        padding-bottom: 10px;
+        filter: drop-shadow(4px 4px 4px gl.$dark-green);
+        h3 {
+          display: inline-block;
+          padding: 5px 10px 3px 10px;
+          font-family: Merriweather;
+          font-size: 2rem;
+          font-weight: 700;
+          background-color: gl.$agropunk-red;
+          color: white;
+          margin-left: -10px;
+          margin-top: -20px;
+          padding: 3px 5px 2px 5px;
+        } 
+        h3 + p {
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: 0.05rem;
+          border-left: 2px solid white;
+          border-top: 2px solid white;
+          margin-left: 5px;
+          margin-top: -10px;
+          padding: 10px 20px 10px 5px;;
+          width: max-content;
+          height: max-content;
+        }   
+      }
+      & .fa-solid {
+        font-size: 3rem;
+        margin-left: -1.2rem;
+        transform-box: view-box;
+        transition: transform 500ms;
+      }
+      &:hover,
+      &:focus {
+        animation: branch-shake 400ms;
+        h3 {
+          background-color: gl.$agropunk-yellow;
+        }
+      }
+      &:hover .fa-solid,
+      &:focus .fa-solid {
+        transform: translateY(200%);  
+      }
+    }
+  }
+}
+
+.middle-banner {
+  height: 5.4rem;
+  background: linear-gradient(gl.$dark-green, gl.$solar-yellow, #022601);
+  margin-bottom: 80px;
+  img {
+    width: 45%;
+    margin-top: -10px;
+    margin-left: 5px;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+article {
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  header {
+    background-color: gl.$background-green;
+    h2 {
+      font-family: Merriweather;
+      font-size: 1.8rem;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  }  
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    padding: 5px 5px;
+    color: gl.$agropunk-black;
+    text-indent: 1rem;
+  }
+  .second-nav ul {
+    display : flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 5px;
+    li {
+      flex: 1 1 45%;
+      text-align: center;
+      background-color: gl.$background-green;
+      border-radius: 10px;
+      a {
+        display: inline-block;
+        font-size: 1.5rem;
+        height: 5rem;
+        align-content: center;
+      }
+    &:hover,
+    &:focus {
+        background-color: gl.$medium-green;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+$dark-green: #078c03;
+$medium-green: #57c753;
+$pale-green: #d2f2c9;
+$background-green: #d2f2c981;
+$light-green: #c4ef56;
+$agropunk-yellow: #f5e836;
+$solar-yellow: #f2cb05;
+$agropunk-red: #f20505;
+$agropunk-black: #0d0d0d;
+$font-prose: Lato, sans-serif;
+$font-title: Merriweather, serif;
+
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: $font-prose;
+  strong {
+    font-weight: 700;
+  }
+}
