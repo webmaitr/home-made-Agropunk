@@ -3,8 +3,26 @@
 
 @keyframes branch-shake {
   0% {transform: rotate(0deg)}
-  50% {transform: rotate(0.5deg)}
+  50% {transform: rotate(1deg)}
   100% {transform: rotate(0deg);}
+}
+@keyframes apple-fall {
+  0% {
+    transform: translateY(0);
+  }
+  10% {  
+    transform: translateY(0);
+  }
+  40% {
+    transform: rotate(-40deg);
+  }
+  70% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: translateY(100%);
+    color: gl.$agropunk-red;
+  }
 }
 
 h1 {
@@ -91,90 +109,91 @@ main {
 }
 
 .central-nav-tree {
-  padding-left: 40px;
-  margin-top: 20px;
-  background-color: white;
-  ul {
-    list-style-type: none;
-    position: relative;
-    background: linear-gradient(45deg, gl.$medium-green, gl.$pale-green);
-    li {
-      border-left: 6px solid gl.$agropunk-black;
-      width: 100%;
-      max-width: 350px;
-    
-      &:first-of-type {
-        height: 100%;
-        min-height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 10vh 10vh;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding-right: 10px;
+  background: linear-gradient(45deg, gl.$medium-green, gl.$pale-green);
+  a {
+    border-left: 6px solid gl.$agropunk-black;
+    padding-bottom: 20px;
+    hgroup{
+      margin-bottom: 20px;
+      h3 {
+        font-family: Merriweather;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        background-color: gl.$agropunk-red;
+        width: min-content;
+        margin-left: -10px;
+        margin-top: -20px;
+        padding: 3px 5px 2px 5px;
         position: relative;
-        top: 1%;
-        z-index: 1;
+        z-index: 4;
       }
-      &:nth-of-type(2) {
-        margin-left: 30px;
-        position: absolute;
-        top: 30%;
-        z-index: 2;
-        height: 35vh;
-      }
-      &:last-of-type {
-        margin-left: 60px;
-        position: absolute;
-        top: 60%;
-        z-index: 3;
-        height: 20vh;
-      }
-      hgroup {
+      h3 + p {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        margin-top: -10px;
+        margin-left: 3px;
+        padding: 10px 20px 10px 5px;
         background: radial-gradient(closest-corner at 75% 40%, gl.$light-green 5%, gl.$medium-green 200%, gl.$dark-green);
-        border-radius: 0 0 100px 0;
-        width: 70%;
-        padding-bottom: 10px;
-        filter: drop-shadow(4px 4px 4px gl.$dark-green);
-        h3 {
-          display: inline-block;
-          padding: 5px 10px 3px 10px;
-          font-family: Merriweather;
-          font-size: 2rem;
-          font-weight: 700;
-          background-color: gl.$agropunk-red;
-          color: white;
-          margin-left: -10px;
-          margin-top: -20px;
-          padding: 3px 5px 2px 5px;
-        } 
-        h3 + p {
-          color: white;
-          font-size: 1.5rem;
-          font-weight: 700;
-          letter-spacing: 0.05rem;
-          border-left: 2px solid white;
-          border-top: 2px solid white;
-          margin-left: 5px;
-          margin-top: -10px;
-          padding: 10px 20px 10px 5px;;
-          width: max-content;
-          height: max-content;
-        }   
-      }
-      & .fa-solid {
-        font-size: 3rem;
-        margin-left: -1.2rem;
-        transform-box: view-box;
-        transition: transform 500ms;
-      }
-      &:hover,
-      &:focus {
-        animation: branch-shake 400ms;
-        h3 {
-          background-color: gl.$agropunk-yellow;
-        }
-      }
-      &:hover .fa-solid,
-      &:focus .fa-solid {
-        transform: translateY(200%);  
+        border-bottom-right-radius: 100px;
+        width: max-content;
+        position: absolute;
       }
     }
+    & + i {
+      position: relative;
+      top: 35px;
+      z-index: 1;
+      font-size: 3rem;
+      color: gl.$dark-green;
+    }
   }
+
+  a:hover {
+    animation: 300ms branch-shake;
+    h3 {
+      background-color: gl.$agropunk-yellow;
+    }
+    & + i {
+      transform-origin: top left;
+      animation: 1000ms forwards apple-fall;
+    }
+  }
+  a[href*="association"] {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    & + i {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+    }
+  }
+  a[href*="network"] {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    & + i {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
+    }
+  }
+  a[href*="school"] {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    & + i {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+  }
+  
 }
 
 .middle-banner {

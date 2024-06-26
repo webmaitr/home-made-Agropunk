@@ -28,10 +28,28 @@ p strong {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(0.5deg);
+    transform: rotate(1deg);
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes apple-fall {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: rotate(-40deg);
+  }
+  70% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: translateY(100%);
+    color: #f20505;
   }
 }
 h1 {
@@ -116,89 +134,91 @@ main {
 }
 
 .central-nav-tree {
-  padding-left: 40px;
-  margin-top: 20px;
-  background-color: white;
-}
-.central-nav-tree ul {
-  list-style-type: none;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 10vh 10vh;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding-right: 10px;
   background: linear-gradient(45deg, #57c753, #d2f2c9);
 }
-.central-nav-tree ul li {
+.central-nav-tree a {
   border-left: 6px solid #0d0d0d;
-  width: 100%;
-  max-width: 350px;
+  padding-bottom: 20px;
 }
-.central-nav-tree ul li:first-of-type {
-  height: 100%;
-  min-height: 50vh;
-  position: relative;
-  top: 1%;
-  z-index: 1;
+.central-nav-tree a hgroup {
+  margin-bottom: 20px;
 }
-.central-nav-tree ul li:nth-of-type(2) {
-  margin-left: 30px;
-  position: absolute;
-  top: 30%;
-  z-index: 2;
-  height: 35vh;
-}
-.central-nav-tree ul li:last-of-type {
-  margin-left: 60px;
-  position: absolute;
-  top: 60%;
-  z-index: 3;
-  height: 20vh;
-}
-.central-nav-tree ul li hgroup {
-  background: radial-gradient(closest-corner at 75% 40%, #c4ef56 5%, #57c753 200%, #078c03);
-  border-radius: 0 0 100px 0;
-  width: 70%;
-  padding-bottom: 10px;
-  filter: drop-shadow(4px 4px 4px #078c03);
-}
-.central-nav-tree ul li hgroup h3 {
-  display: inline-block;
-  padding: 5px 10px 3px 10px;
+.central-nav-tree a hgroup h3 {
   font-family: Merriweather;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  background-color: #f20505;
   color: white;
+  background-color: #f20505;
+  width: -moz-min-content;
+  width: min-content;
   margin-left: -10px;
   margin-top: -20px;
   padding: 3px 5px 2px 5px;
+  position: relative;
+  z-index: 4;
 }
-.central-nav-tree ul li hgroup h3 + p {
+.central-nav-tree a hgroup h3 + p {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  margin-left: 5px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
   margin-top: -10px;
+  margin-left: 3px;
   padding: 10px 20px 10px 5px;
+  background: radial-gradient(closest-corner at 75% 40%, #c4ef56 5%, #57c753 200%, #078c03);
+  border-bottom-right-radius: 100px;
   width: -moz-max-content;
   width: max-content;
-  height: -moz-max-content;
-  height: max-content;
+  position: absolute;
 }
-.central-nav-tree ul li .fa-solid {
+.central-nav-tree a + i {
+  position: relative;
+  top: 35px;
+  z-index: 1;
   font-size: 3rem;
-  margin-left: -1.2rem;
-  transform-box: view-box;
-  transition: transform 500ms;
+  color: #078c03;
 }
-.central-nav-tree ul li:hover, .central-nav-tree ul li:focus {
-  animation: branch-shake 400ms;
+.central-nav-tree a:hover {
+  animation: 300ms branch-shake;
 }
-.central-nav-tree ul li:hover h3, .central-nav-tree ul li:focus h3 {
+.central-nav-tree a:hover h3 {
   background-color: #f5e836;
 }
-.central-nav-tree ul li:hover .fa-solid, .central-nav-tree ul li:focus .fa-solid {
-  transform: translateY(200%);
+.central-nav-tree a:hover + i {
+  transform-origin: top left;
+  animation: 1000ms forwards apple-fall;
+}
+.central-nav-tree a[href*=association] {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.central-nav-tree a[href*=association] + i {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.central-nav-tree a[href*=network] {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.central-nav-tree a[href*=network] + i {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.central-nav-tree a[href*=school] {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.central-nav-tree a[href*=school] + i {
+  grid-column: 3/4;
+  grid-row: 3/4;
 }
 
 .middle-banner {
