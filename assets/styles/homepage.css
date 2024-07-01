@@ -48,7 +48,7 @@ p strong {
     transform: rotate(40deg);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(90%);
     color: #f20505;
   }
 }
@@ -135,15 +135,15 @@ main {
 
 .central-nav-tree {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, 10vh);
   margin-left: 40px;
   margin-top: 40px;
   padding-right: 10px;
-  background: linear-gradient(45deg, #57c753, #d2f2c9);
+  background: radial-gradient(farthest-corner at 95% 0, #f2cb05 -30%, #d2f2c9 5%, #57c753 20%, #078c03 90%, #0d0d0d 120%);
 }
 .central-nav-tree a {
-  border-left: 6px solid #0d0d0d;
+  border-left: 8px solid #0d0d0d;
   padding-bottom: 20px;
 }
 .central-nav-tree a hgroup {
@@ -168,23 +168,24 @@ main {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
+  border-left: 1px solid #f20505;
+  border-top: 1px solid #f2cb05;
   margin-top: -10px;
-  margin-left: 3px;
   padding: 10px 20px 10px 5px;
   background: radial-gradient(closest-corner at 75% 40%, #c4ef56 5%, #57c753 200%, #078c03);
   border-bottom-right-radius: 100px;
   width: -moz-max-content;
   width: max-content;
   position: absolute;
+  z-index: 3;
 }
 .central-nav-tree a + i {
   position: relative;
-  top: 35px;
+  top: 40px;
+  left: 15px;
   z-index: 1;
-  font-size: 3rem;
-  color: #078c03;
+  font-size: 2rem;
+  color: #0d0d0d;
 }
 .central-nav-tree a:hover {
   animation: 300ms branch-shake;
@@ -222,6 +223,7 @@ main {
 }
 
 .middle-banner {
+  display: none;
   height: 5.4rem;
   background: linear-gradient(#078c03, #f2cb05, #022601);
   margin-bottom: 80px;
@@ -231,7 +233,7 @@ main {
   margin-top: -10px;
   margin-left: 5px;
   position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 
 article {

@@ -20,7 +20,7 @@
     transform: rotate(40deg);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(90%);
     color: gl.$agropunk-red;
   }
 }
@@ -110,14 +110,14 @@ main {
 
 .central-nav-tree {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, 10vh);
   margin-left: 40px;
   margin-top: 40px;
   padding-right: 10px;
-  background: linear-gradient(45deg, gl.$medium-green, gl.$pale-green);
+  background: radial-gradient(farthest-corner at 95% 0, gl.$solar-yellow -30%, gl.$pale-green 5%, gl.$medium-green 20%, gl.$dark-green 90%, gl.$agropunk-black 120%);
   a {
-    border-left: 6px solid gl.$agropunk-black;
+    border-left: 8px solid gl.$agropunk-black;
     padding-bottom: 20px;
     hgroup{
       margin-bottom: 20px;
@@ -139,23 +139,24 @@ main {
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0.05rem;
-        border-left: 1px solid white;
-        border-top: 1px solid white;
+        border-left: 1px solid gl.$agropunk-red;
+        border-top: 1px solid gl.$solar-yellow;
         margin-top: -10px;
-        margin-left: 3px;
         padding: 10px 20px 10px 5px;
         background: radial-gradient(closest-corner at 75% 40%, gl.$light-green 5%, gl.$medium-green 200%, gl.$dark-green);
         border-bottom-right-radius: 100px;
         width: max-content;
         position: absolute;
+        z-index: 3;
       }
     }
     & + i {
       position: relative;
-      top: 35px;
+      top: 40px;
+      left: 15px;
       z-index: 1;
-      font-size: 3rem;
-      color: gl.$dark-green;
+      font-size: 2rem;
+      color: gl.$agropunk-black;
     }
   }
 
@@ -197,6 +198,7 @@ main {
 }
 
 .middle-banner {
+  display: none;
   height: 5.4rem;
   background: linear-gradient(gl.$dark-green, gl.$solar-yellow, #022601);
   margin-bottom: 80px;
@@ -205,7 +207,7 @@ main {
     margin-top: -10px;
     margin-left: 5px;
     position: relative;
-    z-index: 4;
+    z-index: 10;
   }
 }
 
