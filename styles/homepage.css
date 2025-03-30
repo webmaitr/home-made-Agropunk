@@ -1,0 +1,346 @@
+
+body {
+  position:relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner {
+  height: 10vh;
+  background: rgb(7,140,3);
+  background: linear-gradient(180deg, rgba(7,140,3,1) 0%, rgba(7,140,3,1) 20%, rgba(242,203,5,1) 50%, rgba(7,140,3,1) 77%, rgba(0,80,34,1) 92%, rgba(2,0,36,1) 100%);
+  display: flex;
+  align-items: center;
+}
+.banner img {
+  height: 15vh;
+}
+.banner p {
+  margin-right: 20px;
+  margin-left: 6vw;
+  font-size: min(6vw, 2rem);
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 2px #0d0d0d;
+}
+
+main>p {
+  text-align: center;
+  font-size: min(5vw, 24px);
+  color: red;
+  margin-top: 30px;
+}
+
+/* --------- list of projects -------- */
+.central {
+  justify-items: center;
+  /* background-color: #5df798; */
+  background: url(./../assets/backgrounds/background2.png);
+  background-size: 200%;
+  padding-top: 10px;
+}
+
+.central img {
+  display: none;
+}
+
+.central h2 {
+  font-size: min(5vw, 2rem);
+  padding: 10px;
+  text-align: left;
+  color: rgb(1, 97, 33);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow : inset -4px 4px 4px #00521b9c;
+}
+
+.central h3 {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  filter: drop-shadow(-4px 4px 4px rgb(138, 137, 137));
+}
+
+.central ul {
+  padding-left: 0px;
+}
+
+
+.project {
+  display: flex;
+  align-items: center;
+ margin-bottom: 10px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 25px;
+  box-shadow : inset -2px 2px 4px #00521b9c;
+  background-color: white;
+}
+
+.project>p {
+  border-radius: 50%;
+  background-color: #30F47B;
+  /* background: rgb(242,203,5);
+  background: radial-gradient(circle at 75% 25%, rgba(242,203,5,1) 0%, rgb(11, 185, 5) 65%, rgba(1,28,1,1) 95%); */
+  width: 30px;
+  height: 30px;
+  text-align:center;
+  align-content: center;
+  filter: drop-shadow(-2px 2px 2px #00521b);
+}
+
+.tag {
+  background-color: #30F47B;
+  /* background: rgb(7,140,3);
+  background: linear-gradient(180deg, rgba(7,140,3,1) 0%, rgba(7,140,3,1) 5%, rgba(242,203,5,1) 30%, rgba(7,140,3,1) 75%, rgba(0,80,34,1) 92%, rgba(2,0,36,1) 100%); */
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  min-width: 275px;
+  filter: drop-shadow(-2px 2px 2px #00521b);
+  
+}
+
+.tag p:first-of-type {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+  margin: 5px 0;
+}
+
+.tag p:nth-of-type(2) {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(27, 110, 2);
+  /* text-shadow: 1px 1px 2px #0d0d0d; */
+  margin: 5px 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.starter {
+  background-color: rgba(255, 255, 255);
+  position:absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  padding-left: calc(20% - 136px);
+  padding-right: calc(20% - 136px);
+  justify-content: center;
+}
+
+.starter img {
+  position: absolute;
+  left: 90%;
+  width: 40px;
+  background-color: rgba(255, 255, 255);
+  border: 1px solid #f20505b0;
+}
+
+.starter img:hover {
+  cursor: pointer;
+}
+
+.insight {
+  background: rgba(255, 255, 255);
+  padding-bottom: 30px;
+}
+
+
+.punchline {
+  height: 100vw;
+  background-image: url("../assets/backgrounds/fond_com_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3%;
+}
+
+.punchline p {
+  color: white;
+  font-weight: 700;
+  margin: 10px;
+  text-shadow: rgb(114, 0, 0) 2px 2px;
+}
+
+.punchline p:first-of-type {
+  font-size: min(72px, 9vw);
+}
+
+.punchline p:nth-of-type(2) {
+  font-size: min(44px, 5.5vw);
+}
+
+.punchline p:last-of-type {
+  font-size: min(40px, 5vw);
+  text-align: right;
+  padding-top: 4%;
+  padding-right: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.insight p:first-of-type {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px;
+  max-width: 800px;
+}
+
+.insight .signature {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.btn-style {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin: 40px auto;
+  border: 1px solid #f20505;
+  border-radius: 5px;
+  background-color: #f20505;
+  filter: drop-shadow(-2px 2px 2px #4d0101)
+}
+
+.btn-style:hover, .btn-style:focus {
+  cursor: pointer;
+  background-color: #f2050556;
+  filter: drop-shadow(0px 0px 0px #4d0101)
+}
+
+/* -------------------- 730px ------------*/
+@media screen and (min-width: 730px) {
+
+
+  .banner {
+    border-radius: 10px;
+  }
+
+  .central {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .central h2 {
+    grid-column: span 2;
+  }
+
+
+  .starter {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .starter.hidden {
+    display: none;
+  }
+
+  .punchline {
+    flex: 1;
+  }
+
+  .punchline p:first-of-type {
+    font-size: max(3.5vw, 31px);
+  }
+
+  .punchline p:nth-child(2) {
+    font-size: max(1.9vw, 16px);
+  }
+
+  .punchline p:last-of-type {
+    font-size: max(3vw, 25px);
+  }
+
+  .insight {
+    flex: 1;
+    margin-top: 20px
+  }
+}
+
+/* -------------------1280px --------------*/
+
+@media screen and (min-width: 1280px) {
+
+  header {
+
+    max-width: 50%;
+  }
+
+  .central {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: right;
+    margin-right: 0;
+    max-width: 100%;
+    background-size: contain;
+  }
+
+
+
+  .central img {
+    display: block;
+    max-width: 90%;
+    padding: 30px;
+    grid-row: span 2;
+    background-color: white;
+    border-radius: 20%;
+    margin-top: 40px;
+    filter: drop-shadow(-4px 4px 4px rgb(145, 145, 145));
+  }
+
+  .central div:first-of-type {
+    grid-column: 2 / 3;
+  }
+   .central div {
+    padding: 0 20px;
+   }
+
+  .starter {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* ---------------- 400px --------------*/
+
+@media screen and (max-width: 400px) {
+
+  .banner p {
+    margin-left: 5vw
+  }
+
+  .central {
+    margin-left: 5%;
+    justify-items:left;
+  }
+
+
+  .punchline p:first-of-type {
+    font-size: 8.5vw;
+  }
+  
+  .punchline p:nth-of-type(2) {
+    font-size: 5vw;
+  }
+}
